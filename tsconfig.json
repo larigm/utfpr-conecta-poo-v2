@@ -1,0 +1,13 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2020",         // Compila para uma versão moderna do JavaScript
+    "module": "commonjs",       // Usa o sistema de módulos do Node.js
+    "outDir": "./dist",         // Onde o JavaScript compilado será guardado
+    "rootDir": "./src",         // Onde o nosso código TypeScript vai ficar
+    "strict": true,             // Ativa todas as regras mais rigorosas para um código mais seguro
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
