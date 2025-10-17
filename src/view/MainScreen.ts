@@ -21,7 +21,13 @@ export class MainView {
         const local = this.prompt("Local do evento: ");
         const cursos = [CourseEnum.SI];
 
-        this.eventController.criarEvento(titulo, data, local, cursos);
+        const dadosNewEvent = {
+            titulo: titulo,
+            data: data,
+            local: local,
+            cursos: [CourseEnum.SI]
+        };
+        this.eventController.criarEvento(dadosNewEvent);
         console.log("Evento criado.");
     }
     public start(): void {
