@@ -3,7 +3,6 @@ import { Academic } from "../model/Academic";
 import { Register } from '../model/Register';
 import { Event } from '../model/Event';
 import { EventController } from './EventController';
-import { CourseEnum } from '../model/CourseEnum';
 
 export class RegisterController {
     private registers: Register[] = [];
@@ -23,10 +22,8 @@ export class RegisterController {
         if (jaInscrito) {
             return false;
         }
-
-        // A CORREÇÃO ESTÁ AQUI:
         if (user instanceof Academic && evento.cursos.length > 0) {
-            // Usamos 'user.curso' em vez de 'user.CourseEnum'
+            
             if (!evento.cursos.includes(user.course)) {
                 return false;
             }
